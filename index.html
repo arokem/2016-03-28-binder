@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pulse2Percept</title>
+    <title>Binder</title>
     <meta charset="utf-8">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
@@ -22,7 +22,7 @@
 
       class: center, middle
 
-      #### Binder:  an instrument for open and reproducible science (?)
+      ### Binder:  an instrument for open and reproducible science (?)
 
       #### <a href="http://arokem.org/">Ariel Rokem</a>
 
@@ -55,7 +55,7 @@
 
       --
 
-      You have to download my code, and my data to your machine.
+      To reproduce my results, you have to download my code, and my data, to your machine.
 
       --
 
@@ -94,8 +94,8 @@
       A repo with .ipynb files
 
       --
-      
-      If you need anything but pure Python:
+
+      If you need anything that isn't installed with Anaconda:
 
       A `requirements.txt` file that specifies requirements to be installed with
       `pip`.
@@ -114,6 +114,31 @@
 
       See: https://docs.docker.com/engine/reference/builder/
 
+      This last option will also let you add data to the binder (see examples in http://github.com/arokem/white-matter-matters)
+
+      ---
+
+      ### If you need additional services
+
+      --
+
+      You can attach postgres:
+
+      https://github.com/binder-project/example-service-postgres
+
+      --
+
+      Or Spark:
+
+      https://github.com/binder-project/example-service-spark
+
+      ---
+
+      ### It's all in flux!
+
+      <image src="images/wip.jpeg">
+
+      For example, a .binder.yml file format for configuration is being developed to specify dependencies
       ---
 
       ### let's give it a go!
@@ -121,6 +146,7 @@
       Bust out your notebooks and make a binder!
 
       ---
+
       ### Technical details
 
       Kubernetes is a service of Google Cloud Engine that automates the
@@ -131,16 +157,32 @@
       #### "Containerized"?!
 
       --
+
       Instead of deploying the applciation by installing dependencies with the package manager, we used `Docker`, a super light-weight virtual machine that can be downloaded, installed and launched in a matter of seconds!
 
       --
+
       This has clear application in scaling web-services up and down with usage.
 
       --
+
       And we're enjoying it vicariously
 
+      ---
 
+      ### Is this good for reproducibility?
 
+      Pro :
+
+      --
+
+      Con :
+
+      --
+
+      - Will it work in the long run?
+
+      -  
       ---
       class: center
       layout: false
