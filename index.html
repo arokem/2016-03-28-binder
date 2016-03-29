@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pulse2Percept</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: "Encode Sans Normal", serif }
+      h1, h2, h3 {
+        font-family: 'Encode Sans Normal';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-slide-container {transition: opacity 0.5s ease-out;opacity: 0;}
+      .remark-visible {transition: opacity 0.5s ease-out;opacity: 1;}
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+      class: center, middle
+
+      #### Binder:  an instrument for open and reproducible science (?)
+
+      #### <a href="http://arokem.org/">Ariel Rokem</a>
+
+      ##### The University of Washington eScience Institute
+
+      <image src="images/eScience_Logo_RGB_PP.png">
+
+      ---
+
+      layout: true
+
+      <div style="position: absolute; left: 650px; top: 370px;">
+      <image src="images/escience-network.png" width=500px style="opacity:0.4;filter:alpha(opacity=40);"> </div>
+
+      ---
+
+      ### Binder
+
+      http://mybinder.org
+
+      --
+      System for deploying Jupyter notebooks from GitHub repos via Kubernetes
+
+      --
+
+      Turns a github repo with jupyter notebooks into an interactive webpage
+      where the notebooks can be run by others
+
+      ---
+
+      ### Let's see how that works
+
+      An example: https://github.com/arokem/try-tf
+
+      --
+      #### The components:
+
+      --
+
+      A repo with .ipynb files
+
+      --
+
+      A `requirements.txt` file that specifies requirements to be installed with
+      `pip`.
+
+      --
+
+      OR: a conda environment.yml file
+
+      --
+
+      OR: a DOCKERFILE
+
+      ---
+
+      ### let's give it a go!
+
+      Bust out your notebooks and make a binder!
+
+      ---
+      ### Technical details
+
+      Kubernetes is a service of Google Cloud Engine that automates the
+      deployment of containerized applications.
+
+      --
+
+      #### "Containerized"?!
+
+      --
+      Instead of deploying the applciation by installing dependencies with the package manager, we used `Docker`, a super light-weight virtual machine that can be downloaded, installed and launched in a matter of seconds!
+
+      --
+      This has clear application in scaling web-services up and down with usage.
+
+      --
+      And we're enjoying it vicariously
+
+      
+
+      ---
+      class: center
+      layout: false
+
+      ### Stay in touch!
+
+      <div style="position:absolute; left: 220px; top:100px;">
+        <img src="images/globe-xxl.png" width="100px;" style="background:none; border:none; box-shadow:none;">
+        <div style="position:absolute; left: 120px; top:40px;">http://arokem.org
+        </div>
+      </div>
+      <div style="position:absolute; left: 220px; top:220px;">
+        <img src="images/email-11-xxl.png" width="100px;" style="background:none; border:none; box-shadow:none;">
+        <div style="position:absolute; left: 120px; top:40px;">arokem@gmail.com
+        </div>
+      </div>
+      <div style="position:absolute; left: 220px; top:340px;">
+        <img src="images/twitter-xxl.png" width="100px;" style="background:none; border:none; box-shadow:none;">
+        <div style="position:absolute; left: 120px; top:40px;">@arokem
+        </div>
+      </div>
+      <div style="position:absolute; left: 220px; top:460px;">
+        <img src="images/github-6-xxl.png" width="100px;" style="background:none; border:none; box-shadow:none;">
+        <div style="position:absolute; left: 120px; top:40px;">github.com/arokem
+        </div>
+      </div>
+
+    </textarea>
+
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+
+    <script src="remark-latest.min.js">
+    </script>
+
+    <script>
+    var slideshow = remark.create({
+      navigation: {click: false, scroll: false},
+      properties: {class: "center, middle"},
+      countIncrementalSlides: false
+                                  });
+
+    // Setup MathJax
+    MathJax.Hub.Config({
+        tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+            return(elem.SourceElement());
+        }).parent().addClass('has-jax');
+    });
+
+    MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
