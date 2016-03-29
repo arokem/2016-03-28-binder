@@ -30,6 +30,8 @@
 
       <image src="images/eScience_Logo_RGB_PP.png">
 
+
+        <small>Follow along at: <a href="http://arokem.github.io/2016-03-28-binder">arokem.github.io/2016-03-28-binder</a></small>
       ---
 
       layout: true
@@ -39,11 +41,38 @@
 
       ---
 
+      ### Jupyter
+
+      - Jupyter notebooks are great
+
+      --
+
+      #### Problem
+
+      --
+
+      To run my notebooks, you have to install all my dependencies.
+
+      --
+
+      You have to download my code, and my data to your machine.
+
+      --
+
+      If my code has compiled components, you'll need to compile it.
+
+      --
+
+      If you happen to have a different operating system, different compiler, different libraries, etc... we're probably out of luck!
+
+      ---
+
       ### Binder
 
       http://mybinder.org
 
       --
+
       System for deploying Jupyter notebooks from GitHub repos via Kubernetes
 
       --
@@ -65,17 +94,25 @@
       A repo with .ipynb files
 
       --
+      
+      If you need anything but pure Python:
 
       A `requirements.txt` file that specifies requirements to be installed with
       `pip`.
 
-      --
-
-      OR: a conda environment.yml file
+      See: https://pip.pypa.io/en/stable/user_guide/#requirements-files
 
       --
 
-      OR: a DOCKERFILE
+      Or a conda environment.yml file
+
+      See : http://conda.pydata.org/docs/using/envs.html
+
+      --
+
+      Or a DOCKERFILE
+
+      See: https://docs.docker.com/engine/reference/builder/
 
       ---
 
@@ -102,7 +139,7 @@
       --
       And we're enjoying it vicariously
 
-      
+
 
       ---
       class: center
