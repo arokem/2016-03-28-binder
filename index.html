@@ -22,7 +22,7 @@
 
       class: center, middle
 
-      ### Binder:  an instrument for open and reproducible science (?)
+      ### Binder:  an instrument for open and reproducible science
 
       #### <a href="http://arokem.org/">Ariel Rokem</a>
 
@@ -71,6 +71,8 @@
 
       http://mybinder.org
 
+      Developed by the <a href="https://www.janelia.org/lab/freeman-lab">Freeman Lab</a> at Janelia Farms
+
       --
 
       System for deploying Jupyter notebooks from GitHub repos via Kubernetes
@@ -84,7 +86,7 @@
 
       ### Let's see how that works
 
-      An example: https://github.com/arokem/try-tf
+      An example: https://t.co/b1DfMFV5HK
 
       --
       #### The components:
@@ -93,7 +95,10 @@
 
       A repo with .ipynb files
 
-      --
+      https://github.com/ctb/2016-mybinder-inflammation
+      http://mybinder.org/repo/ctb/2016-mybinder-inflammation
+
+      ---
 
       If you need anything that isn't installed with Anaconda:
 
@@ -102,13 +107,17 @@
 
       See: https://pip.pypa.io/en/stable/user_guide/#requirements-files
 
-      --
+      https://github.com/arokem/try-tf
+
+      ---
 
       Or a conda environment.yml file
 
+      https://github.com/minrk/ligo-binder
+
       See : http://conda.pydata.org/docs/using/envs.html
 
-      --
+      ---
 
       Or a DOCKERFILE
 
@@ -132,6 +141,10 @@
 
       https://github.com/binder-project/example-service-spark
 
+      --
+
+      Not too sure how that works
+
       ---
 
       ### It's all in flux!
@@ -139,6 +152,7 @@
       <image src="images/wip.jpeg">
 
       For example, a .binder.yml file format for configuration is being developed to specify dependencies
+
       ---
 
       ### let's give it a go!
@@ -170,19 +184,54 @@
 
       ---
 
-      ### Is this good for reproducibility?
+      ### Are we there yet?
 
-      Pro :
+      "Is mybinder 95% of the way to next-gen computational science publishing, or only 90%?"
 
-      --
-
-      Con :
+        Titus Brown: http://ivory.idyll.org/blog/2016-mybinder.html
 
       --
+      #### The following are relatively easy
 
-      - Will it work in the long run?
+      - Authentication and cost. How will this work in the long run?
 
-      -  
+      - Executing other than github repos
+
+      - Rstudio/Rmarkdown
+
+      - Pre-built Docker images
+
+      ---
+      #### These are a bit harder:
+
+      - Large amounts of data.
+
+      - Large amounts of compute.
+
+
+      #### Things to do:
+
+      "A grant proposal: A workshop on dockerized notebook computing"
+
+      http://ivory.idyll.org/blog/2016-mybinder-workshop-proposal.html
+
+      Proposed topics/hacks:
+      <small>
+      - Hack on mybinder and develop APIs and tools to connect mybinder to other hosting platforms, both commercial (AWS, Azure, etc.) and academic (e.g. XSEDE/TACC);
+
+      - Connect mybinder to other versioning sites, including bitbucket and gitlab.
+
+      - Brainstorm and hack on ways to connect credentials to mybinder to support private repositories and for-pay compute.
+
+      - Identify missing links and technologies that are needed to more fully realize the promise of mybinder and Jupyter notebook.
+
+      - Identify overlaps and complementarity with existing projects that we can make use of.
+
+      - More integrated support for docker hub (and private hub) based images;
+      brainstorm around blockers that prevent mybinder from being used for more data-intensive workflows.
+
+      </small>
+
       ---
       class: center
       layout: false
